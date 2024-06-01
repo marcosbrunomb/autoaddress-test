@@ -11,7 +11,7 @@ const Gifs = () => {
   ) : (
     <>
       <div className="flex flex-col w-full items-center py-10">
-        <h2 className="mb-2 text-4xl font-bold tracking-tight truncate text-gray-600 dark:text-white">
+        <h2 className="flex w-full mb-2 text-4xl font-bold tracking-tight text-center justify-center text-gray-600 dark:text-white">
           {search && `Showing by ${search}`}
           {!search && `The most popular gifs of the moment`}
         </h2>
