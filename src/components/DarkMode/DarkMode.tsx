@@ -7,6 +7,7 @@ const DarkMode = () => {
   return (
     <div className="flex w-full justify-end px-4 py-4">
       <button
+        data-testid="button-switch-dark-mode"
         data-tooltip-id="switchDarkModeTooltip"
         data-tooltip-content={`Switch to the ${
           isDarkMode ? "light" : "dark"
@@ -18,7 +19,7 @@ const DarkMode = () => {
       >
         {isDarkMode && (
           <svg
-            id="theme-toggle-light-icon"
+            data-testid="light-icon"
             className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +31,7 @@ const DarkMode = () => {
         )}
         {!isDarkMode && (
           <svg
+            data-testid="dark-icon"
             className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
