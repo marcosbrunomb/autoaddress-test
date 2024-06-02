@@ -16,7 +16,7 @@ const Gifs = () => {
           {!search && `The most popular gifs of the moment`}
         </h2>
       </div>
-      <div className="flex flex-wrap w-full h-full justify-center items-center gap-4">
+      <div data-testid="gifs_cards" className="flex flex-wrap w-full h-full justify-center items-center gap-4">
         {trendingGifs.map((item: GiphyData) => (
           <GifCard key={item.id} gif={item} />
         ))}
