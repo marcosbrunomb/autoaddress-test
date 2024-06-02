@@ -3,12 +3,12 @@ import Modal from "./Modal";
 import { MOCK } from "../../hooks/useFetchData/mock";
 import { GiphyContext } from "../../contexts/GiphyContext";
 
-const mockSetGif = vitest.fn();
+const mockRemoveGif = vitest.fn();
 
 const MockContextValues = {
   inputValue: "",
   loading: false,
-  removeGif: mockSetGif,
+  removeGif: mockRemoveGif,
   search: "",
   selectedGif: MOCK[0],
   setInputValue: () => {},
@@ -17,7 +17,7 @@ const MockContextValues = {
 };
 
 describe("Modal Component", () => {
-  test("deve mostrar o título do gif", async () => {
+  test("should show the title of the gif", async () => {
     render(
       <GiphyContext.Provider value={{ ...MockContextValues }}>
         <Modal />
@@ -28,7 +28,7 @@ describe("Modal Component", () => {
     expect(title).toBeInTheDocument();
   });
 
-  test("deve inserir a classe flex no fundo se houver um selectedGif", async () => {
+  test("should insert the flex class in the background if there is a selectedGif", async () => {
     render(
       <GiphyContext.Provider value={{ ...MockContextValues }}>
         <Modal />
@@ -39,7 +39,7 @@ describe("Modal Component", () => {
     expect(background.classList.value.includes('flex')).toBe(true);
   });
 
-  test("deve inserir a classe hidden no fundo se não houver um selectedGif", async () => {
+  test("should insert the hidden class in the background if there is no selectedGif", async () => {
     render(
       <GiphyContext.Provider value={{ ...MockContextValues, selectedGif: undefined }}>
         <Modal />
@@ -62,6 +62,6 @@ describe("Modal Component", () => {
       await fireEvent.click(button);
     });
 
-    expect(mockSetGif).toHaveBeenCalled();
+    expect(mockRemoveGif).toHaveBeenCalled();
   });
 });

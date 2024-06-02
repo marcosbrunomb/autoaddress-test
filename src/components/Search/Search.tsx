@@ -25,6 +25,7 @@ const Search = () => {
             </svg>
           </div>
           <input
+            data-testid="search-input"
             type="search"
             id="default-search"
             value={inputValue}
