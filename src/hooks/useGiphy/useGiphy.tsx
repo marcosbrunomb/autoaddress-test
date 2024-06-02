@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GiphyContext } from "../contexts/GiphyContext";
+import { GiphyContext } from "../../contexts/GiphyContext";
 
 const useGiphy = () => useContext(GiphyContext);
 

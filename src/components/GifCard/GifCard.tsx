@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { GiphyData } from "../../models/ITrending";
-import useGiphy from "../../hooks/useGiphy";
 import { motion } from "framer-motion";
+import useGiphy from "../../hooks/useGiphy/useGiphy";
 
 interface IGifCard {
   gif: GiphyData;

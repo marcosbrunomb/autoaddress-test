@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GiphyData } from "../models/ITrending";
+import { GiphyData } from "../../models/ITrending";
 
 const useSelectedGif = () => {
   const [selectedGif, setSelectedGif] = useState<GiphyData | undefined>();

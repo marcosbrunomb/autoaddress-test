@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import useGiphy from "../../hooks/useGiphy";
+import useGiphy from "../../hooks/useGiphy/useGiphy";
 
 const Modal = () => {
   const { selectedGif, removeGif } = useGiphy();

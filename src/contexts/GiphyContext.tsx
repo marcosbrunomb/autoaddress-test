@@ -4,9 +4,8 @@ import {
   useState,
 } from "react";
 import { GiphyData } from "../models/ITrending";
-import useFetchData from "../hooks/useFetchData";
-import { MOCK } from "./mock";
-import useSelectedGif from "../hooks/useSelectedGif";
+import useFetchData from "../hooks/useFetchData/useFetchData";
+import useSelectedGif from "../hooks/useSelectedGif/useSelectedGif";
 
 interface GiphyContextType {
   trendingGifs: GiphyData[];
@@ -25,7 +24,7 @@ interface IGiphyProvider {
 }
 
 const GiphyProvider = ({ children }: IGiphyProvider) => {
-  const [trendingGifs, setTrendingGifs] = useState<GiphyData[]>(MOCK);
+  const [trendingGifs, setTrendingGifs] = useState<GiphyData[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
   const [search, setSearch] = useState<string>("");
   const { fetchData, loading } = useFetchData();

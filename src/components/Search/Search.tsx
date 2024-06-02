@@ -1,4 +1,4 @@
-import useGiphy from "../../hooks/useGiphy";
+import useGiphy from "../../hooks/useGiphy/useGiphy";
 
 const Search = () => {
   const { inputValue, setInputValue } = useGiphy();

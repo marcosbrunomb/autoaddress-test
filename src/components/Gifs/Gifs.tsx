@@ -1,4 +1,4 @@
-import useGiphy from "../../hooks/useGiphy";
+import useGiphy from "../../hooks/useGiphy/useGiphy";
 import { GiphyData } from "../../models/ITrending";
 import GifCard from "../GifCard/GifCard";
 import Loading from "../Loading/Loading";

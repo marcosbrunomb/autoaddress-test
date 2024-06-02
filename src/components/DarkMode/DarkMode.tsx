@@ -1,4 +1,4 @@
-import useDarkMode from "../../hooks/useDarkMode";
+import useDarkMode from "../../hooks/useDarkMode/useDarkMode";
 import { Tooltip } from "react-tooltip";
 
 const DarkMode = () => {
