@@ -8,13 +8,13 @@ interface UseFetchData {
 
 const useFetchData = (): UseFetchData => {
   const [loading, setLoading] = useState<boolean>(false);
-  // const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
   const fetchData = async (search?: string): Promise<ITrending> => {
     const url = search ? `search?q=${search}&` : "trending?";
     setLoading(true);
     try {
-        // await sleep(3000);
+        await sleep(3000);
       const response = await fetch(
         `${import.meta.env.VITE_GIPHY_URL}/${url}api_key=${
           import.meta.env.VITE_GIPHY_API_KEY

@@ -36,11 +36,11 @@ const GiphyProvider = ({ children }: IGiphyProvider) => {
       setSearch(inputValue);
     }, 500);
     return () => clearTimeout(delayInputTimeoutId);
-  }, [inputValue, 500]);
+  }, [inputValue]);
 
-  // useEffect(() => {
-  //   getTrending();
-  // }, [search]);
+  useEffect(() => {
+    getTrending();
+  }, [search]);
 
   const getTrending = async () => {
     const trending = await fetchData(search);
