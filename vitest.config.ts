@@ -10,6 +10,10 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: ["./src/setupTests.ts"],
+    coverage: {
+      include: ['src/**'],
+      exclude: ['src/main.tsx']
+    }
   },
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "./src") }],
