@@ -6,6 +6,7 @@ const Modal = () => {
   return (
     <>
       <div
+        data-testid="background"
         className={`fixed w-full h-full bg-black bg-opacity-70 top-0 left-0 ${
           selectedGif ? `flex` : `hidden`
         }`}
@@ -34,6 +35,7 @@ const Modal = () => {
                 </div>
                 <div className="flex w-auto justify-end">
                   <button
+                    data-testid="close-button"
                     onClick={() => removeGif()}
                     type="button"
                     className="mb-3 sm:mb-0 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg p-2.5"
