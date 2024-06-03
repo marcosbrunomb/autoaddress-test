@@ -1,7 +1,27 @@
 import { useState } from "react";
 import { GiphyData } from "../../models/ITrending";
 
-const useSelectedGif = () => {
+export interface UseSelectedGif {
+  /**
+   * Function to set the selected GIF
+   * @param gif - The selected gif
+   * @returns A promise that resolves when the GIF is set
+   */
+  setGif: (gif: GiphyData) => Promise<void>;
+
+  /** Function to remove the selected GIF */
+  removeGif: () => void;
+
+  /** The currently selected GIF */
+  selectedGif: GiphyData | undefined;
+}
+
+/**
+ *
+ * Hook customised to handle modal opening events
+ * @return {*}  {UseSelectedGif}
+ */
+const useSelectedGif = (): UseSelectedGif => {
   const [selectedGif, setSelectedGif] = useState<GiphyData | undefined>();
   const sleep = (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));

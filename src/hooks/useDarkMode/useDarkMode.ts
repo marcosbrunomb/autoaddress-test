@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 
 export interface UseDarkMode {
+  /** Indicates if dark mode is currently enabled */
   isDarkMode: boolean;
+
+  /** Function to toggle the dark mode state */
   toggleDarkMode: () => void;
 }
 

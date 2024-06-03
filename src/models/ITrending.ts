@@ -31,7 +31,7 @@ export interface GiphyData {
   analytics: Analytics;
 }
 
-interface User {
+export interface User {
   avatar_url: string;
   banner_url: string;
   banner_image: string;
@@ -44,7 +44,7 @@ interface User {
   is_verified: boolean;
 }
 
-interface Analytics {
+export interface Analytics {
   onload: {
     url: string;
   };
@@ -56,7 +56,7 @@ interface Analytics {
   };
 }
 
-interface Images {
+export interface Images {
   fixed_height: FixedHeight;
   fixed_height_still?: FixedHeightStill;
   fixed_height_downsampled: FixedHeightDownsampled;
@@ -79,7 +79,7 @@ interface Images {
   preview_gif?: PreviewGif;
 }
 
-interface FixedHeight {
+export interface FixedHeight {
   url: string;
   width: string;
   height: string;
@@ -90,13 +90,13 @@ interface FixedHeight {
   webp_size: string;
 }
 
-interface FixedHeightStill {
+export interface FixedHeightStill {
   url: string;
   width: string;
   height: string;
 }
 
-interface FixedHeightDownsampled {
+export interface FixedHeightDownsampled {
   url: string;
   width: string;
   height: string;
@@ -105,7 +105,7 @@ interface FixedHeightDownsampled {
   webp_size: string;
 }
 
-interface FixedWidth {
+export interface FixedWidth {
   url: string;
   width: string;
   height: string;
@@ -116,13 +116,13 @@ interface FixedWidth {
   webp_size: string;
 }
 
-interface FixedWidthStill {
+export interface FixedWidthStill {
   url: string;
   width: string;
   height: string;
 }
 
-interface FixedWidthDownsampled {
+export interface FixedWidthDownsampled {
   url: string;
   width: string;
   height: string;
@@ -131,7 +131,7 @@ interface FixedWidthDownsampled {
   webp_size: string;
 }
 
-interface FixedHeightSmall {
+export interface FixedHeightSmall {
   url: string;
   width: string;
   height: string;
@@ -142,13 +142,13 @@ interface FixedHeightSmall {
   webp_size: string;
 }
 
-interface FixedHeightSmallStill {
+export interface FixedHeightSmallStill {
   url: string;
   width: string;
   height: string;
 }
 
-interface FixedWidthSmall {
+export interface FixedWidthSmall {
   url: string;
   width: string;
   height: string;
@@ -159,47 +159,47 @@ interface FixedWidthSmall {
   webp_size: string;
 }
 
-interface FixedWidthSmallStill {
+export interface FixedWidthSmallStill {
   url: string;
   width: string;
   height: string;
 }
 
-interface Downsized {
-  url: string;
-  width: string;
-  height: string;
-  size: string;
-}
-
-interface DownsizedStill {
-  url: string;
-  width: string;
-  height: string;
-}
-
-interface DownsizedLarge {
+export interface Downsized {
   url: string;
   width: string;
   height: string;
   size: string;
 }
 
-interface DownsizedMedium {
+export interface DownsizedStill {
+  url: string;
+  width: string;
+  height: string;
+}
+
+export interface DownsizedLarge {
   url: string;
   width: string;
   height: string;
   size: string;
 }
 
-interface DownsizedSmall {
+export interface DownsizedMedium {
+  url: string;
+  width: string;
+  height: string;
+  size: string;
+}
+
+export interface DownsizedSmall {
   mp4: string;
   width: string;
   height: string;
   mp4_size: string;
 }
 
-interface Original {
+export interface Original {
   url: string;
   width: string;
   height: string;
@@ -212,36 +212,36 @@ interface Original {
   hash: string;
 }
 
-interface OriginalStill {
+export interface OriginalStill {
   url: string;
   width: string;
   height: string;
 }
 
-interface Looping {
+export interface Looping {
   mp4: string;
 }
 
-interface Preview {
+export interface Preview {
   mp4: string;
   mp4_size: string;
   width: string;
   height: string;
 }
 
-interface PreviewGif {
+export interface PreviewGif {
   url: string;
   width: string;
   height: string;
 }
 
-interface GiphyPagination {
+export interface GiphyPagination {
   offset: number;
   total_count: number;
   count: number;
 }
 
-interface Meta {
+export interface Meta {
   msg: string;
   status: number;
   response_id: string;

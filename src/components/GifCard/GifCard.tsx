@@ -3,7 +3,7 @@ import { GiphyData } from "../../models/ITrending";
 import { motion } from "framer-motion";
 import useGiphy from "../../hooks/useGiphy/useGiphy";
 
-interface IGifCard {
+export interface IGifCard {
   gif: GiphyData;
 }
 

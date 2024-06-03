@@ -1,11 +1,23 @@
 import { useState } from "react";
 import { ITrending } from "../../models/ITrending";
 
-interface UseFetchData {
+export interface UseFetchData {
+  /** Loading status while data is being fetched */
   loading: boolean;
+
+  /**
+   * Function to fetch data based on an optional search string
+   * @param search - Optional parameter to define whether the query will be carried out in the search or trending API
+   * @returns A promise that resolves the query data
+   */
   fetchData: (search?: string) => Promise<ITrending>;
 }
 
+/**
+ *
+ * Customised hook to fetch data from the Giphy API
+ * @return {*}  {UseFetchData}
+ */
 const useFetchData = (): UseFetchData => {
   const [loading, setLoading] = useState<boolean>(false);
 
