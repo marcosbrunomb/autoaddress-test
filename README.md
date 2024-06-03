@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+# AutoAddress Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Test carried out for the AutoAddress company. Thank you in advance for the opportunity and I hope it's up to what you're looking for.
 
-Currently, two official plugins are available:
+In this project you can check out the main gifs of the moment, using the Giphy API as an integration. You can also search for your favourite gif using the search bar. You can use the site in light and dark mode
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Demo](demo/demo.gif)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```bash
+npm install
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Node version 18.16.0 was used. If there are any incompatibility problems, I recommend installing the same version. You can do this using nvm and run `nvm use` in the root of the project.
+
+## Test coverage
+This project has complete test coverage. You can check this by running
+
+```bash
+npm run test:coverage
+```
+You can open the `index.html` file created inside the `coverage` folder to check in more detail.
+
+![Coverage](demo/coverage.png)
+
+## Documentation
+This project also contains documentation material on the main functions and types, using `TypeDocs`. You can check this by running
+
+```bash
+npm run doc
+```
+
+Once the documentation has been generated, you can open the `index.html` file located in the `docs` folder.
+
+## Technology
+
+This project was created, tested and documented with:
+- React + Vite
+- TailwindCss
+- Framer Motion
+- Jest
+- Vitest
+- React Testing Library
+- Type Doc
